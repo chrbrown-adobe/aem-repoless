@@ -5,7 +5,7 @@ export default async function decorate(block) {
   const variationname = props[1].textContent.trim() || 'master';
   const cachebuster = Math.floor(Math.random() * 1000);
 
-  const url = `https://publish-p55117-e571178.adobeaemcloud.com/graphql/execute.json/securbank/FAQListbyTag;tag=${firsttag};variation=${variationname}?ts=${cachebuster}`;
+  const url = `https://publish-p107109-e1000961.adobeaemcloud.com/graphql/execute.json/securbank/FAQListbyTag;tag=${firsttag};variation=${variationname}?ts=${cachebuster}`;
   const options = {};
   const faq = await fetch(url, options);
   const index = await faq.json();
