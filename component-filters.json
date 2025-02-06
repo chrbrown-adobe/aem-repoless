@@ -36,13 +36,20 @@
       "featurearticles",
       "fragment",
       "faq",
-      "embed"
+      "embed",
+      "teaser"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "slide"
     ]
   }
 ]
