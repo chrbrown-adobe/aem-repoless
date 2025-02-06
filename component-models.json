@@ -398,5 +398,16 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",      
+        "name": "url",
+        "label": "Embed"
+      }
+    ]
   }
 ]
