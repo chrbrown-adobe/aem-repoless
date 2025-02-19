@@ -92,7 +92,7 @@
   @media (width >= 1920px) {
     .feature-content-container {
       position: absolute;
-      margin:  120px 300px 0 320px;
+   /*   margin:  120px 300px 0 320px;  */
     }
   }
   
