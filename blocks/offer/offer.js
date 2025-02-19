@@ -31,6 +31,7 @@ export default async function decorate(block) {
           <p data-aue-prop="pretitle" data-aue-label="pretitle" data-aue-type="text" class='headline'>${cfReq.pretitle}</p>
           <p data-aue-prop="detail" data-aue-label="detail" data-aue-type="richtext" class='detail'>${cfReq.detail.plaintext}</p>
       </div>
+      <div class='banner-logo'>
       </div>
   </div>
 `;
