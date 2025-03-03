@@ -37,6 +37,10 @@
       "fragment",
       "faq",
       "embed",
+      "teaser",
+      "blockquote",
+      "herovideo",
+      "table",
       "teaser"
     ]
   },
