@@ -471,11 +471,11 @@
     "id": "herovideo",
     "fields": [
       {
-        "component": "text-input",
-        "name": "text",
-        "value": "",
-        "label": "URL",
-        "valueType": "string"
+        "component": "reference",
+        "valueType": "string",
+        "name": "video",
+        "label": "Video",
+        "multi": false
       }
     ]
   }
