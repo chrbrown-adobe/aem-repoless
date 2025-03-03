@@ -290,7 +290,7 @@
     },
     {
       "title": "Rich Media",
-      "id": "default",
+      "id": "richmedia",
       "components": [
         {
           "title": "Hero Video",

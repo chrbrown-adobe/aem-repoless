@@ -15,8 +15,7 @@
       "text",
       "image",
       "button",
-      "title",
-      "creditcardsummary"
+      "title"
     ]
   },
   {
@@ -30,16 +29,13 @@
       "cards",
       "columns",
       "feature",
-      "forex",
       "map",
       "offer",
       "featurearticles",
       "fragment",
       "faq",
-      "embed",
       "teaser",
       "blockquote",
-      "herovideo",
       "table",
       "teaser"
     ]
@@ -54,6 +50,14 @@
     "id": "carousel",
     "components": [
       "slide"
+    ]
+  },
+  {
+    "id": "richmedia",
+    "components": [
+      "embed",
+      "herovideo",
+      "carousel"
     ]
   }
 ]

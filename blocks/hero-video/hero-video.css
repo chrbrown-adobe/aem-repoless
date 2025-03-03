@@ -59,7 +59,7 @@ main .section.hero-video-container {
   main .overlay {
     text-align: left;
     z-index: 1;
-    width: 41%;
+    width: 100%;
     padding: 15px;
     position: absolute;
     left: 40px;
