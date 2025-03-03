@@ -193,7 +193,7 @@
       {
         "component": "select",
         "label": "Style",
-        "name": "select",
+        "name": "style",
         "valueType": "string",
         "options": [
           { "name": "Light", "value": "light" },
