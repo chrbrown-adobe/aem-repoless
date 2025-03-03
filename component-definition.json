@@ -285,13 +285,7 @@
               }
             }
           }
-        }
-      ]
-    },
-    {
-      "title": "Rich Media",
-      "id": "richmedia",
-      "components": [
+        },
         {
           "title": "Hero Video",
           "id": "herovideo",
