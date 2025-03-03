@@ -164,7 +164,7 @@ export default function decorate(block) {
 
   decorateTeaser(teaserVideoLink, teaserPicture, heroContent);
 
-  const overlay = videoBanner.children[1];
+  const overlay = videoBanner.children[0];
   overlay.classList = 'overlay';
 
   const fullScreenVideoLink = overlay.querySelector('a:last-of-type');
