@@ -154,7 +154,7 @@ async function decorateFullScreenVideo(fullScreenVideoLink, teaserPicture, targe
 
 export default function decorate(block) {
   const videoBanner = block.children[0];
-  videoBanner.classList.add('hero-video-banner');
+  videoBanner.classList.add('hero-video');
 
   const heroContent = videoBanner.children[0];
   heroContent.classList.add('teaser-video-container');
