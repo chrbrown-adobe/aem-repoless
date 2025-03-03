@@ -39,7 +39,9 @@
       "blockquote",
       "table",
       "teaser",
-      "richmedia"
+      "embed",
+      "herovideo",
+      "carousel"
     ]
   },
   {
@@ -52,14 +54,6 @@
     "id": "carousel",
     "components": [
       "slide"
-    ]
-  },
-  {
-    "id": "richmedia",
-    "components": [
-      "embed",
-      "herovideo",
-      "carousel"
     ]
   }
 ]

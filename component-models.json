@@ -191,11 +191,15 @@
     "id": "section",
     "fields": [
       {
-        "component": "text-input",
-        "name": "style",
-        "value": "",
+        "component": "select",
         "label": "Style",
-        "valueType": "string"
+        "name": "select",
+        "valueType": "string",
+        "options": [
+          { "name": "Light", "value": "light" },
+          { "name": "Highlight", "value": "highlight" },
+          { "name": "Dark", "value": "dark" }
+        ]
       }
     ]
   },
