@@ -21,7 +21,7 @@ export default async function decorate(block) {
   const { interestrate } = placeholders;
   const interest = document.createElement('p');
   interest.classList.add('feature-interest-rate');
-  interest.innerHTML = `<strong>${interestrate}</strong>`;
+  interest.innerHTML = `<strong>TimberTech by AZEK</strong>`;
   callOutWrapper.appendChild(interest);
 
   callOutWrapper.append(row);
