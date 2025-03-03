@@ -15,7 +15,8 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "richmedia"
     ]
   },
   {
@@ -37,7 +38,8 @@
       "teaser",
       "blockquote",
       "table",
-      "teaser"
+      "teaser",
+      "richmedia"
     ]
   },
   {
