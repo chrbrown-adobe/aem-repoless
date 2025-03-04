@@ -240,7 +240,24 @@ main .section {
 
 /* section metadata */
 main .section.highlight {
-  background-color: var(--highlight-background-color);
+  background-color: var(--light-color);
+}
+main .section.light {
+  background-color: #8ba744;
+}
+main .section.dark {
+  background-color: #333333;
+}
+ol {
+  list-style-type: decimal;
+}
+
+ol > li > ol {
+  list-style-type: lower-alpha;
+}
+
+ol > li > ol > li > ol {
+  list-style-type: lower-roman;
 }
 
 .section h2 {
