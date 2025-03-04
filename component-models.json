@@ -134,6 +134,27 @@
             "value": "secondary"
           }
         ]
+      },
+      {
+        "component": "select",
+        "name": "alignment",
+        "value": "",
+        "label": "Alignment",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "full",
+            "value": "full"
+          },
+          {
+            "name": "center",
+            "value": "center"
+          }
+        ]
       }
     ]
   },
