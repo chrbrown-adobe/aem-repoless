@@ -24,7 +24,7 @@ document.getElementById("google-map-location").innerHTML =
   '"' +
   'style="width:1200px; height:600px"></object>';
 
-  class locationInfo {
+class locationInfo {
   constructor(method, input) {
     this.method = method,
       this.input = input,
@@ -160,7 +160,7 @@ class locationMap {
           title: "<p class='storeTitle'>TimberTech Dealer</p><p class='storeAddress'>" + location.getAddress("c") + "</p>",
           lat: this.location.lat + 0.01,
           lng: this.location.lng + 0.03,
-          name: "EkoVision Store"
+          name: "AZEK Dealer"
         }
         ];
         // Create the markers
@@ -234,115 +234,115 @@ class locationMap {
         return this.storeMarkup;
       };
   }
-} 
+}
 
 function findStores(input, callback) {
-	var locInfo = new locationInfo("address", input);
-	locInfo.getLocationInfo(saveLocation);
-	function saveLocation(success, nlat, nlng, ncity, nstate, nzip, naddress) {
-		if (success) {
-			locInfo.lat = nlat;
-			locInfo.lng = nlng;
-			locInfo.city = ncity;
-			locInfo.state = nstate;
-			locInfo.zip = nzip;
-			locInfo.address = naddress;
-		}
-		else {
-			locInfo.lat = "42.796";
-			locInfo.lng = "-71.530";
-			locInfo.city = "Nashua";
-			locInfo.state = "NH";
-			locInfo.zip = "03063";
-			locInfo.address = naddress;
-		}
-		callback(locInfo);
-	}
+  var locInfo = new locationInfo("address", input);
+  locInfo.getLocationInfo(saveLocation);
+  function saveLocation(success, nlat, nlng, ncity, nstate, nzip, naddress) {
+    if (success) {
+      locInfo.lat = nlat;
+      locInfo.lng = nlng;
+      locInfo.city = ncity;
+      locInfo.state = nstate;
+      locInfo.zip = nzip;
+      locInfo.address = naddress;
+    }
+    else {
+      locInfo.lat = "42.796";
+      locInfo.lng = "-71.530";
+      locInfo.city = "Nashua";
+      locInfo.state = "NH";
+      locInfo.zip = "03063";
+      locInfo.address = naddress;
+    }
+    callback(locInfo);
+  }
 }
 function displayLocation(location) {
-	$("._EKSC_zip").text(location.zip);
-	$(".addressa, select#store>option:nth-child(1)").text((location.getAddress("a")));
-	$(".addressb, select#store>option:nth-child(2)").text((location.getAddress("b")));
-	$(".addressc, select#store>option:nth-child(3)").text((location.getAddress("c")));
-	lineUpMenus();
+  $("._EKSC_zip").text(location.zip);
+  $(".addressa, select#store>option:nth-child(1)").text((location.getAddress("a")));
+  $(".addressb, select#store>option:nth-child(2)").text((location.getAddress("b")));
+  $(".addressc, select#store>option:nth-child(3)").text((location.getAddress("c")));
+  lineUpMenus();
 }
 function locateStore(what) {
-    var findWhat = $("#" + what).val();
-    createCookie("findwhat", findWhat, 0);
-    window.location = "/StoreLocator.aspx?findwhat=1";
+  var findWhat = $("#" + what).val();
+  createCookie("findwhat", findWhat, 0);
+  window.location = "/StoreLocator.aspx?findwhat=1";
 }
 function createCookie(name, value, days) {
-	if (days) {
-		var date = new Date();
-		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-		var expires = "; expires=" + date.toGMTString();
-	}
-	else var expires = "";
-	document.cookie = name + "=" + value + expires + "; path=/";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    var expires = "; expires=" + date.toGMTString();
+  }
+  else var expires = "";
+  document.cookie = name + "=" + value + expires + "; path=/";
 };
 
 function readCookie(name) {
-	var nameEQ = name + "=";
-	var ca = document.cookie.split(';');
-	for (var i = 0; i < ca.length; i++) {
-		var c = ca[i];
-		while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-	}
-	return null;
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
 };
 
 function eraseCookie(name) {
-	createCookie(name, "", -1);
+  createCookie(name, "", -1);
 };
 (function ($) {
-	$.QueryString = (function (a) {
-		if (a == "") return {};
-		var b = {};
-		for (var i = 0; i < a.length; ++i) {
-			var p = a[i].split('=');
-			if (p.length != 2) continue;
-			b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
-		}
-		return b;
-	})(window.location.search.substr(1).split('&'))
+  $.QueryString = (function (a) {
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i) {
+      var p = a[i].split('=');
+      if (p.length != 2) continue;
+      b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+  })(window.location.search.substr(1).split('&'))
 })(jQuery);
 
 function trim(s) {
-	s = s.replace(/(^\s*)|(\s*$)/gi,"");
-	s = s.replace(/[ ]{2,}/gi," ");
-	s = s.replace(/\n /,"\n");
-	return s;
+  s = s.replace(/(^\s*)|(\s*$)/gi, "");
+  s = s.replace(/[ ]{2,}/gi, " ");
+  s = s.replace(/\n /, "\n");
+  return s;
 }
 function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-        vars[key] = value;
-    });
-    return vars;
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+    vars[key] = value;
+  });
+  return vars;
 }
 
 function GetCookie(name) {
-    var arg = name + "=";
-    var alen = arg.length;
-    var clen = document.cookie.length;
-    var i = 0;
-    while (i < clen) {
-        var j = i + alen;
-        if (document.cookie.substring(i, j) == arg) {
-            return getCookieVal(j);
-        }
-        i = document.cookie.indexOf(" ", i) + 1;
-        if (i == 0) break;
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal(j);
     }
-    return null;
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break;
+  }
+  return null;
 }
 
 function getCookieVal(offset) {
-    var endstr = document.cookie.indexOf(";", offset);
-    if (endstr == -1) {
-        endstr = document.cookie.length;
-    }
-    
-    return unescape(document.cookie.substring(offset, endstr));
+  var endstr = document.cookie.indexOf(";", offset);
+  if (endstr == -1) {
+    endstr = document.cookie.length;
+  }
+
+  return unescape(document.cookie.substring(offset, endstr));
 }
