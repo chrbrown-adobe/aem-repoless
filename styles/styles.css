@@ -251,6 +251,7 @@ main .section.light {
 }
 main .section.dark {
   background-color: #333333;
+  color:#F3F2F6;
 }
 ol {
   list-style-type: decimal;
