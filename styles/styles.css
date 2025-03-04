@@ -181,7 +181,11 @@ a.button.secondary, button.secondary {
   border: 2px solid currentcolor;
   color: var(--text-color)
 }
-
+a.button.primary, button.primary {
+  background-color: red;
+  border: 2px solid currentcolor;
+  color: var(--text-color)
+}
 main img {
   max-width: 100%;
   width: auto;
