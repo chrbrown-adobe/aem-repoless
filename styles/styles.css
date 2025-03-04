@@ -165,6 +165,9 @@ a.button:any-link, button {
   text-overflow: ellipsis;
   border-radius: 30px;
 }
+button.full{
+  display:block !important;
+}
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
   background-color: var(--link-hover-color);
@@ -182,7 +185,7 @@ a.button.secondary, button.secondary {
   color: var(--text-color)
 }
 a.button.primary, button.primary {
-  background-color: red;
+  background-color: rgb(255, 166, 0);
   border: 2px solid currentcolor;
   color: var(--text-color)
 }
