@@ -165,7 +165,10 @@ a.button:any-link, button {
   text-overflow: ellipsis;
   border-radius: 30px;
 }
-button.full{
+a.button.full, button.full{
+  display:block !important;
+}
+a.button.center, button.center{
   display:block !important;
 }
 
