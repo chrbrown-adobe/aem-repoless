@@ -3,6 +3,3 @@ mountpoints:
     url: https://author-p107109-e1000961.adobeaemcloud.com/bin/franklin.delivery/chrisjejbrown/securbank-aem-ue/main
     type: markup
     suffix: ".html?wcmmode=disabled"
-  /: 
-    url: https://drive.google.com/drive/folders/1GCgxq3qX1La3zH6vms-eDeeBc5YUrmKR
-    type: markup
