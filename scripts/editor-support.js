@@ -5,7 +5,7 @@ import {
   decorateIcons,
   decorateSections,
   loadBlock,
-  loadSections,
+  loadBlocks,
 } from './aem.js';
 import { decorateRichtext } from './editor-support-rte.js';
 import { decorateMain } from './scripts.js';
@@ -33,7 +33,7 @@ async function applyChanges(event) {
       element.insertAdjacentElement('afterend', newMain);
       decorateMain(newMain);
       decorateRichtext(newMain);
-      await loadSections(newMain);
+      await loadBlocks(newMain);
       element.remove();
       newMain.style.display = null;
       // eslint-disable-next-line no-use-before-define
@@ -45,7 +45,9 @@ async function applyChanges(event) {
     if (block) {
       const blockResource = block.getAttribute('data-aue-resource');
       const newBlock = parsedUpdate.querySelector(`[data-aue-resource="${blockResource}"]`);
-      if (newBlock) {
+      if (block.dataset.aueModel === 'form') {
+        return true;
+      } else if (newBlock) {
         newBlock.style.display = 'none';
         block.insertAdjacentElement('afterend', newBlock);
         decorateButtons(newBlock);
@@ -71,7 +73,7 @@ async function applyChanges(event) {
           decorateRichtext(newSection);
           decorateSections(parentElement);
           decorateBlocks(parentElement);
-          await loadSections(parentElement);
+          await loadBlocks(parentElement);
           element.remove();
           newSection.style.display = null;
         } else {
@@ -88,7 +90,7 @@ async function applyChanges(event) {
   return false;
 }
 
-function attachEventListners(main) {
+async function attachEventListners(main) {
   [
     'aue:content-patch',
     'aue:content-update',
@@ -100,6 +102,8 @@ function attachEventListners(main) {
     const applied = await applyChanges(event);
     if (!applied) window.location.reload();
   }));
+  const module = await import('./form-editor-support.js');
+  module.attachEventListners(main);
 }
 
 attachEventListners(document.querySelector('main'));
