@@ -18,7 +18,7 @@
  * the terms of the Adobe license agreement accompanying it.
  ************************************************************************ */
 import decorate, { generateFormRendition } from '../blocks/form/form.js';
-import { loadCSS } from './aem.js.old';
+import { loadCSS } from './aem.js';
 import { handleAccordionNavigation } from '../blocks/form/components/accordion/accordion.js';
 
 window.currentMode = 'preview';

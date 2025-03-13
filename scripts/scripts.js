@@ -15,7 +15,7 @@ import {
   loadCSS,
   toCamelCase,
   toClassName,
-} from './aem.js.old';
+} from './aem.js';
 import getAudiences from './utils.js';
 
 // Add you templates below
