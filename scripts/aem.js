@@ -889,6 +889,7 @@ export {
   fetchPlaceholders,
   getMetadata,
   loadBlock,
+  loadBlocks,
   loadCSS,
   loadFooter,
   loadHeader,
