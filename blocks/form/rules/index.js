@@ -24,7 +24,7 @@ import {
 import registerCustomFunctions from './functionRegistration.js';
 import { externalize } from './functions.js';
 import initializeRuleEngineWorker from './worker.js';
-import { createOptimizedPicture } from '../../../scripts/aem.js';
+import { createOptimizedPicture } from '../../../scripts/aem.js.old';
 
 const formModel = {};
 
